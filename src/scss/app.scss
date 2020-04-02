@@ -1,15 +1,11 @@
+@import "login-form.scss";
+
 .container {
-    background-color: red;
-    margin: auto;
-    width: 25%;
-    text-align: center;
- }
- 
- html, body {
-     height: 100%;
- }
- 
- body {
-     margin: 0;
-     font-family: Roboto, "Helvetica Neue", sans-serif;
- }
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hidden {
+    visibility: hidden;
+}

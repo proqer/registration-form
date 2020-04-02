@@ -4,21 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="src/scss/app.scss" rel="stylesheet" type="text/css">
     <title>Document</title>
 </head>
 
 <body>
     <main class="container">
-        <img src="resources/img/logo.png" width="120" height="80">
-        <h2 class="message">Welcome</h2>
-        <form class="login-form" action="POST">
-            <input type="email" name="email">
-            <input type="password" name="password">
-            <input type="submit" value="Login">
-        </form>
+        <img src="assets/logo.svg" width="120" height="80">
+        <div class="login-form">
+            <h2 class="login-form__message">Welcome</h2>
+            <form class="login-form__input-group" method="POST" action="URL">
+                <div class="login-form__input-container">
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                    <input class="login-form__input-field" placeholder="Email address" type="email" name="email">
+                    <i class="fa fa-eye hidden" aria-hidden="true"></i>
+                </div>
+                <div class="login-form__input-container">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input class="login-form__input-field" placeholder="Password" type="password" name="password">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </div>
+                <div class="login-form__button-container">
+                    <a class="login-form__link" href="https://google.com">
+                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                        Forgot password
+                    </a>
+                    <input class="login-form__button" type="submit" value="Login">
+                </div>
+            </form>
+        </div>
     </main>
-    <footer>footer</footer>
+    <!-- <footer>footer</footer> -->
 </body>
 
 <script type="text/javascript" src="src/js/validation.js"></script>

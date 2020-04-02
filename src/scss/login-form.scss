@@ -1,0 +1,60 @@
+.login-form {
+    width: 50%;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+@media screen and (max-width: 500px) {
+    .login-form {
+        width: 95%;
+    }
+}
+
+.login-form__message {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.login-form__input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form__input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.4em 0;
+    color: gray;
+    border-bottom: 1px solid gray;
+}
+
+.login-form__input-field {
+    font-size: 1em;
+    height: 1.7em;
+    margin: 0 0.4em;
+    width: 100%;
+    border: none;
+}
+
+.login-form__button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: gray;
+    margin: 0.4em 0;
+}
+
+.login-form__link {
+    font-size: 1em;
+    color: gray;
+    text-decoration: none;
+}
+
+.login-form__button {
+    border-radius: 1em;
+    border: 1px solid gray;
+    padding: 0.6em 0.9em;
+    background-color: white;
+    color: gray;
+    text-align: center;
+    text-decoration: none;
+}
