@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "build": "npm run build-css & npm run minify-js",
-    "build-css": "sass src/scss/app.scss:build/css/app.css --style compressed",
-    "watch-css": "sass --watch src/scss/app.scss:build/css/app.css --style compressed",
-    "minify-js": "mkdirp build/js & terser src/js/* --compress --mangle --source-map \"root='../../',url=app.js.map\" -o build/js/app.js"
+    "watch": "rimraf build && parcel -d build index.html --open",
+    "build": "rimraf build && parcel build -d build index.html"
   },
   "repository": {
     "type": "git",
@@ -20,8 +18,8 @@
   },
   "homepage": "https://github.com/proqer/registration-form#readme",
   "devDependencies": {
-    "mkdirp": "^1.0.3",
-    "sass": "^1.26.3",
-    "terser": "^4.6.10"
+    "parcel": "1.12.4",
+    "rimraf": "3.0.2",
+    "sass": "1.26.3"
   }
 }
