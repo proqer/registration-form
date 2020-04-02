@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "build-css": "sass src/scss/app.scss:build/css/app.min.css --style compressed",
-    "watch-css": "sass --watch src/scss/app.scss:build/css/app.min.css --style compressed"
+    "build": "npm run build-css & npm run minify-js",
+    "build-css": "sass src/scss/app.scss:build/css/app.css --style compressed",
+    "watch-css": "sass --watch src/scss/app.scss:build/css/app.css --style compressed",
+    "minify-js": "mkdirp build/js & terser src/js/* --compress --mangle --source-map \"root='../../',url=app.js.map\" -o build/js/app.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,8 @@
   },
   "homepage": "https://github.com/proqer/registration-form#readme",
   "devDependencies": {
+    "mkdirp": "^1.0.3",
     "sass": "^1.26.3",
-    "uglify-js": "^3.8.1"
+    "terser": "^4.6.10"
   }
 }
