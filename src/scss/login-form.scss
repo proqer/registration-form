@@ -1,15 +1,28 @@
-.login-form {
-    width: 50%;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+$big-screen-form-width: 30%;
+$middle-screen-form-width: 50%;
+$small-screen-form-width: 95%;
+
+.login-form,
+.login-form__footer {
+    width: $big-screen-form-width;
 }
+
+@media screen and (max-width: 1000px) {
+    .login-form,
+    .login-form__footer {
+        width: $middle-screen-form-width;
+    }
+}
+
 @media screen and (max-width: 500px) {
-    .login-form {
-        width: 95%;
+    .login-form,
+    .login-form__footer {
+        width: $small-screen-form-width;
     }
 }
 
 .login-form__message {
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: black;
 }
 
 .login-form__input-group {
@@ -22,7 +35,6 @@
     flex-direction: row;
     align-items: center;
     margin: 0.4em 0;
-    color: gray;
     border-bottom: 1px solid gray;
 }
 
@@ -39,12 +51,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    color: gray;
     margin: 0.4em 0;
 }
 
 .login-form__link {
-    font-size: 1em;
     color: gray;
     text-decoration: none;
 }
@@ -52,9 +62,15 @@
 .login-form__button {
     border-radius: 1em;
     border: 1px solid gray;
-    padding: 0.6em 0.9em;
+    padding: 0.6em 1.2em;
     background-color: white;
     color: gray;
     text-align: center;
-    text-decoration: none;
+}
+
+.login-form__footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="src/scss/app.scss" rel="stylesheet" type="text/css">
-    <title>Document</title>
+    <title>Registration Form</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
                 <div class="login-form__input-container">
                     <i class="fa fa-user-o" aria-hidden="true"></i>
                     <input class="login-form__input-field" placeholder="Email address" type="email" name="email">
-                    <i class="fa fa-eye hidden" aria-hidden="true"></i>
+                    <i class="fa fa-check hidden" aria-hidden="true"></i>
                 </div>
                 <div class="login-form__input-container">
                     <i class="fa fa-lock" aria-hidden="true"></i>
@@ -35,9 +35,19 @@
             </form>
         </div>
     </main>
-    <!-- <footer>footer</footer> -->
-</body>
+    <footer class="footer">
+        <div class="login-form__footer">
+            <div class="location">
+                <i class="fa fa-globe"></i>
+            </div>
+            <a class="login-form__link" href="https://google.com">
+                New user
+                <i class="fa fa-sign-in"></i>
+            </a>
+        </div>
+    </footer>
 
-<script type="text/javascript" src="src/js/validation.js"></script>
+    <script type="text/javascript" src="src/js/validation.js"></script>
+</body>
 
 </html>
