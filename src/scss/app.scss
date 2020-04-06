@@ -12,7 +12,12 @@ body {
     padding: 0;
 }
 
+input:focus {
+    outline: none;
+}
+
 .container {
+    padding-top: 3em;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -42,4 +47,12 @@ body {
     border-radius: 100%;
     border: 0.5em solid white;
     box-shadow: 0 0 10px lightgray;
+}
+
+.fa-check {
+    color: green;
+}
+
+.fa-times {
+    color: red;
 }

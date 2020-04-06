@@ -38,9 +38,22 @@ $small-screen-form-width: 95%;
     border-bottom: 1px solid gray;
 }
 
-.login-form__input-field {
+.login-form__input-container--filled {
+    color: black;
+}
+
+.login-form__input-container--valid {
+    border-bottom: 1px solid green;
+}
+
+.login-form__input-container--invalid {
+    border-bottom: 1px solid red;
+}
+
+.login-form__input-email,
+.login-form__input-password {
     font-size: 1em;
-    height: 1.7em;
+    height: 1.8em;
     margin: 0 0.4em;
     width: 100%;
     border: none;
