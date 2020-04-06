@@ -1,9 +1,13 @@
 # registration-form
 
+# Before build
+
+Run ```npm i```
+
 # Build
 
-In cmd run ```npm run build```
+Run ```npm run build```
 
 # Live-reload dev build
 
-In cmd run ```npm run watch```
+Run ```npm run watch```
