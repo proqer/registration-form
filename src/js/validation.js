@@ -17,7 +17,7 @@ $(document).ready(() => {
     const $passwordIcon = $('.password-icon');
     const $showPasswordIcon = $('.show-password-icon');
 
-    $email.blur(function () {
+    $email.on('input', function () {
         const $input = $(this);
         const $inputContainer = $input.parent();
         const $icon = $input.next();
@@ -31,7 +31,7 @@ $(document).ready(() => {
         }
     });
 
-    $password.blur(function () {
+    $password.on('input', function () {
         const $input = $(this);
         const $inputContainer = $input.parent();
         if (this.checkValidity()) {

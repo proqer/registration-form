@@ -1,5 +1,7 @@
 @import "login-form.scss";
 
+$footer-height: 4em;
+
 html,
 body {
     min-height: 100%;
@@ -12,12 +14,22 @@ body {
     padding: 0;
 }
 
-input:focus {
-    outline: none;
+input {
+    &:focus {
+        outline: none;
+    }
+    &:required {
+        box-shadow: none;
+    }
 }
 
 .container {
+    min-height: calc(100vh - #{$footer-height});
+}
+
+.content {
     padding-top: 3em;
+    padding-bottom: 1em;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -31,10 +43,7 @@ input:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    padding: 1em 0;
-    left: 0;
-    bottom: 0;
+    height: $footer-height;
     width: 100%;
     background-color: whitesmoke;
 }
