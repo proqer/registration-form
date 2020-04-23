@@ -18,11 +18,14 @@
   },
   "homepage": "https://github.com/proqer/registration-form#readme",
   "devDependencies": {
+    "babel-core": "6.26.3",
+    "babel-plugin-transform-class-properties": "6.24.1",
     "parcel": "1.12.4",
     "rimraf": "3.0.2",
     "sass": "1.26.3"
   },
   "dependencies": {
-    "jquery": "3.4.1"
+    "jquery": "3.4.1",
+    "stimulus": "1.1.1"
   }
 }

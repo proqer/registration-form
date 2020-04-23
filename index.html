@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="Put your description here.">
+    <!-- <script type="text/javascript" src="src/js/validation.js" defer></script> -->
+    <script type="text/javascript" src="src/js/index.js" defer></script>
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="src/scss/app.scss" rel="stylesheet" type="text/css">
@@ -13,23 +15,31 @@
 
 <body>
     <main class="container">
+
         <div class="content">
+
             <img src="assets/logo.svg" width="120" height="80" alt="logo">
+
             <div class="login-form">
+
                 <h2 class="login-form__message">Welcome</h2>
+
                 <form class="login-form__input-group" method="POST" action="URL">
+
                     <div class="login-form__input-container">
                         <i class="fa fa-user-o" aria-hidden="true"></i>
                         <input class="login-form__input-email" placeholder="Email address" type="email" name="email"
                             aria-label="Email" required>
                         <i class="fa fa-check hidden" aria-hidden="true"></i>
                     </div>
+
                     <div class="login-form__input-container">
                         <i class="password-icon fa fa-lock" aria-hidden="true"></i>
                         <input class="login-form__input-password" minlength="8" maxlength="20" placeholder="Password"
                             type="password" name="password" aria-label="Password" required>
                         <i class="show-password-icon fa fa-eye" aria-hidden="true"></i>
                     </div>
+
                     <div class="login-form__button-container">
                         <a class="login-form__link" href="https://google.com">
                             <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
@@ -42,18 +52,18 @@
         </div>
     </main>
     <footer class="footer">
+
         <div class="login-form__footer">
+
             <div class="location">
                 <i class="fa fa-globe"></i>
             </div>
+
             <a class="login-form__link" href="https://google.com">
-                New user
-                <i class="fa fa-sign-in"></i>
+                New user <i class="fa fa-sign-in"></i>
             </a>
         </div>
     </footer>
-
-    <script type="text/javascript" src="src/js/validation.js"></script>
 </body>
 
 </html>
