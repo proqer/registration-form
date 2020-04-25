@@ -1,12 +1,10 @@
 import { Application } from "stimulus";
 import Turbolinks from "turbolinks";
 
-import LoginController from "./controllers/login-controller";
-import RegistrationController from "./controllers/registration-controller";
+import FormController from "./controllers/form-controller";
 
 (() => {
     Turbolinks.start();
     const application = Application.start();
-    application.register("login", LoginController);
-    application.register("registration", RegistrationController);
+    application.register("form", FormController);
 })();

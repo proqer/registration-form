@@ -9,7 +9,6 @@
     <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/src/scss/app.scss">
-    <link rel="stylesheet" href="/src/scss/registration-form.scss">
     <title>Registration Form</title>
 </head>
 
@@ -20,40 +19,51 @@
 
             <img src="/assets/logo.svg" width="120" height="80" alt="logo">
 
-            <div class="login-form">
+            <div class="form" data-controller="form"
+                data-form-shown-password-left-icon-class="input__left-icon fa fa-unlock"
+                data-form-shown-password-right-icon-class="input__right-icon fa fa-eye-slash">
 
-                <h2 class="login-form__message">Registration</h2>
+                <h2 class="form__message">Registration</h2>
 
-                <form class="login-form__input-group" method="POST" action="URL">
+                <form class="form__input-group" method="POST" action="URL">
 
-                    <div class="registration-form__input-container">
-                        <input class="registration-form__input-email" minlength="8" maxlength="20" placeholder="Email address" type="email" name="email"
-                        aria-label="Email" required><label>&nbsp;</label>
+                    <div class="form__input-container">
+                        <input class="form__input-email" data-target="form.email" minlength="8" maxlength="20"
+                            placeholder="Email address" type="email" name="email" aria-label="Email" required>
+                        <i class="input__left-icon fa fa-user-o" aria-hidden="true"></i>
+                        <i class="input__right-icon fa" aria-hidden="true"></i>
                     </div>
-                    <div class="registration-form__input-container">
-                        <input class="registration-form__input-password" minlength="8" maxlength="20" placeholder="Password" type="password" name="password"
-                        aria-label="Password" required><label>&nbsp;</label>
+
+                    <div class="form__input-container">
+                        <input class="form__input-password" data-target="form.password" minlength="8" maxlength="20"
+                            placeholder="Password" type="password" name="password" aria-label="Password" required>
+                        <i class="input__left-icon fa fa-lock" data-target="form.leftIcon" aria-hidden="true"></i>
+                        <i class="input__right-icon fa fa-eye" data-target="form.rightIcon" data-action="mousedown->form#showPassword touchstart->form#showPassword
+                            mouseup->form#hidePassword mouseout->form#hidePassword
+                            touchend->form#hidePassword touchcancel->form#hidePassword" aria-hidden="true"></i>
                     </div>
 
-                    <!-- <input class="registration-form__input-password" minlength="8" maxlength="20" placeholder="Password"
-                        type="password" name="password" aria-label="Password" required> -->
-                    <!-- <div class="login-form__input-container">
-                        <i class="password-icon fa fa-lock" aria-hidden="true"></i>
-                        <i class="show-password-icon fa fa-eye" aria-hidden="true"></i>
-                    </div> -->
-
-                    <!-- <div class="login-form__button-container">
-                        <a class="login-form__link" href="https://google.com">
+                    <div class="form__button-container">
+                        <a class="form__link" href="https://google.com">
                             <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                             Forgot password
                         </a>
-                        <input class="login-form__button" type="submit" aria-label="Login" value="Login">
-                    </div> -->
+                        <input class="form__button" type="submit" aria-label="Registration" value="Registration">
+                    </div>
                 </form>
             </div>
         </div>
     </main>
-
+    <footer class="footer">
+        <div class="form__footer">
+            <div class="location">
+                <i class="fa fa-globe"></i>
+            </div>
+            <a class="form__link" href="/">
+                Login <i class="fa fa-sign-in"></i>
+            </a>
+        </div>
+    </footer>
 </body>
 
 </html>

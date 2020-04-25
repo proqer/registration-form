@@ -1,0 +1,146 @@
+$default-text-color: gray;
+$highlighted-text-color: black;
+$valid-color: green;
+$invalid-color: red;
+$big-screen-form-width: 30%;
+$middle-screen-form-width: 50%;
+$small-screen-form-width: 95%;
+
+.form,
+.form__footer {
+    width: $big-screen-form-width;
+}
+
+@media screen and (max-width: 1000px) {
+    .form,
+    .form__footer {
+        width: $middle-screen-form-width;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .form,
+    .form__footer {
+        width: $small-screen-form-width;
+    }
+}
+
+.form__message {
+    color: black;
+}
+
+/*
+    Parent for
+        .form__left-input-icon
+        .form__right-input-icon
+*/
+%form__input-icon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: $default-text-color;
+    position: absolute;
+}
+
+/*
+Structure should be:
+    .form__input-container
+        .%form__credentials-input
+        .form__left-input-icon
+        .form__right-input-icon
+*/
+.form__input-container {
+    position: relative;
+    margin: 0.4em 0;
+    height: 2em;
+    width: 100%;
+}
+
+// Should be inside .form__input-container
+%form__credentials-input {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0 1.2em;
+    font-size: 1em;
+    border: none;
+    border-bottom: 1px solid $default-text-color;
+
+    ~ .input__left-icon {
+        @extend %form__input-icon;
+        left: 0;
+    }
+
+    ~ .input__right-icon {
+        @extend %form__input-icon;
+        right: 0;
+    }
+
+    &:not(:placeholder-shown) ~ .input__left-icon {
+        color: $highlighted-text-color;
+    }
+
+    &:valid {
+        border-bottom: 1px solid $valid-color;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+        border-bottom: 1px solid $invalid-color;
+    }
+}
+
+.form__input-email {
+    @extend %form__credentials-input;
+
+    &:valid ~ .input__right-icon::before {
+        content: "\f00c";
+        color: $valid-color;
+    }
+
+    &:invalid:not(:placeholder-shown) ~ .input__right-icon::before {
+        content: "\f00d";
+        color: $invalid-color;
+    }
+}
+
+.form__input-password {
+    @extend %form__credentials-input;
+
+    ~ .input__right-icon {
+        user-select: none;
+    }
+
+    &:not(:placeholder-shown) ~ .input__right-icon {
+        color: $highlighted-text-color;
+    }
+}
+
+.form__button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.4em 0;
+}
+
+.form__link {
+    color: $default-text-color;
+    text-decoration: none;
+}
+
+.form__button {
+    border-radius: 1em;
+    border: 1px solid $default-text-color;
+    padding: 0.6em 1.2em;
+    color: $default-text-color;
+    text-align: center;
+    cursor: pointer;
+}
+
+.form__footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
