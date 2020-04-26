@@ -19,28 +19,29 @@
 
             <img src="/assets/logo.svg" width="120" height="80" alt="logo">
 
-            <div class="form" data-controller="form"
+            <div class="form" data-controller="form registration"
                 data-form-shown-password-left-icon-class="input__left-icon fa fa-unlock"
                 data-form-shown-password-right-icon-class="input__right-icon fa fa-eye-slash">
 
-                <h2 class="form__message">Registration</h2>
+                <h2 class="form__message" data-target="registration.message">Registration</h2>
 
-                <form class="form__input-group" method="POST" action="URL">
+                <form class="form__input-group" data-action="registration#registerUser" method="POST">
 
                     <div class="form__input-container">
-                        <input class="form__input-email" data-target="form.email" minlength="8" maxlength="20"
+                        <input class="form__input-email" data-target="registration.email" data-action="input->registration#clearValidity" minlength="8" maxlength="20"
                             placeholder="Email address" type="email" name="email" aria-label="Email" required>
                         <i class="input__left-icon fa fa-user-o" aria-hidden="true"></i>
                         <i class="input__right-icon fa" aria-hidden="true"></i>
                     </div>
 
                     <div class="form__input-container">
-                        <input class="form__input-password" data-target="form.password" minlength="8" maxlength="20"
+                        <input class="form__input-password" data-target="form.password registration.password" minlength="8" maxlength="20"
                             placeholder="Password" type="password" name="password" aria-label="Password" required>
                         <i class="input__left-icon fa fa-lock" data-target="form.leftIcon" aria-hidden="true"></i>
-                        <i class="input__right-icon fa fa-eye" data-target="form.rightIcon" data-action="mousedown->form#showPassword touchstart->form#showPassword
-                            mouseup->form#hidePassword mouseout->form#hidePassword
-                            touchend->form#hidePassword touchcancel->form#hidePassword" aria-hidden="true"></i>
+                        <i class="input__right-icon fa fa-eye" data-target="form.rightIcon" 
+                        data-action="mousedown->form#showPassword touchstart->form#showPassword
+                                mouseup->form#hidePassword mouseout->form#hidePassword
+                                touchend->form#hidePassword touchcancel->form#hidePassword" aria-hidden="true"></i>
                     </div>
 
                     <div class="form__button-container">
@@ -48,7 +49,7 @@
                             <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
                             Forgot password
                         </a>
-                        <input class="form__button" type="submit" aria-label="Registration" value="Registration">
+                        <input class="form__button" data-target="registration.submitButton" type="submit" aria-label="Registration" value="Registration">
                     </div>
                 </form>
             </div>

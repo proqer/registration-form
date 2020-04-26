@@ -15,7 +15,9 @@ body {
 }
 
 input {
-    box-shadow: 0 0 0 30px white inset !important;
+    &[type=email], &[type=password], &[type=text] {
+        box-shadow: 0 0 0 30px white inset !important;
+    }
     &:focus {
         outline: none;
     }

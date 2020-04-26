@@ -1,3 +1,4 @@
+$page-background-color: white;
 $default-text-color: gray;
 $highlighted-text-color: black;
 $valid-color: green;
@@ -27,6 +28,12 @@ $small-screen-form-width: 95%;
 
 .form__message {
     color: black;
+}
+
+.form__input-group:valid .form__button {
+    border: 1px solid $valid-color;
+    background-color: $valid-color;
+    color: $page-background-color;
 }
 
 /*
@@ -130,12 +137,19 @@ Structure should be:
 }
 
 .form__button {
+    background-color: $page-background-color;
     border-radius: 1em;
     border: 1px solid $default-text-color;
     padding: 0.6em 1.2em;
     color: $default-text-color;
     text-align: center;
     cursor: pointer;
+}
+
+.form__button--invalid {
+    border: 1px solid $invalid-color;
+    background-color: $invalid-color;
+    color: $page-background-color;
 }
 
 .form__footer {

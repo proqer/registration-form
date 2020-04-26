@@ -2,7 +2,7 @@ import { Controller } from 'stimulus';
 
 export default class extends Controller {
 
-    static targets = ['email', 'password', 'leftIcon', 'rightIcon'];
+    static targets = ['password', 'leftIcon', 'rightIcon'];
 
     hiddenPasswordLeftIconClass;
     shownPasswordLeftIconClass;
